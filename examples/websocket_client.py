@@ -17,8 +17,10 @@ import websockets
 
 
 async def run_client():
-    username = "swatchesbybaobao"
+    # Nhận username từ tham số dòng lệnh (vd: python websocket_client.py username)
+    username = sys.argv[1].lstrip("@") if len(sys.argv) > 1 else "swatchesbybaobao"
     server_uri = f"ws://localhost:8765/live?username={username}"
+
 
     print("=" * 80)
     print(f"🔌 ĐANG KẾT NỐI TỚI WEBSOCKET GATEWAY SERVER: {server_uri}")

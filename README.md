@@ -142,16 +142,26 @@ pip install -r requirements.txt
 python -m playwright install chromium
 ```
 
-> **💡 Windows 1-Click Setup:** If you are on Windows, simply double-click **`install.bat`** inside the `tiktok_live_service` folder!
+### 3. Usage Options
 
-### 3. Launching the WebSocket Gateway Server
+#### Option A: Standalone Python Listener
+Connect directly to any live stream using in-process Python callbacks:
 ```bash
-# Start server on default port 8765
+python examples/basic_listener.py swatchesbybaobao
+```
+
+#### Option B: WebSocket Gateway Server (For Multi-Language Microservices & Web/OBS)
+Start the gateway server to broadcast real-time JSON events to Node.js, C#, PHP, Go, Web apps, or OBS:
+```bash
+# 1. Start the WebSocket Gateway Server (Default: ws://0.0.0.0:8765)
 python ws_server.py
 
-# Or customize host, port, or proxy
-python ws_server.py --host 0.0.0.0 --port 9000 --proxy "http://user:pass@proxy-ip:port"
+# 2. Test connection with the Python client:
+python examples/websocket_client.py swatchesbybaobao
+
+# 3. Or simply double-click examples/web_dashboard.html in your browser!
 ```
+
 
 ---
 

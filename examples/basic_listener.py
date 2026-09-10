@@ -49,12 +49,14 @@ def format_user_badge(evt: TikTokEvent) -> str:
 
 
 async def main():
-    username = "swatchesbybaobao"
+    # Nhận username từ tham số dòng lệnh (vd: python basic_listener.py username)
+    username = sys.argv[1].lstrip("@") if len(sys.argv) > 1 else "swatchesbybaobao"
     client = (
         TikTokLiveClient(username)
         # Prefetch 20 bình luận lịch sử ngay khi vừa vào phòng
         .history_comment_count(20)
     )
+
 
     # Khởi tạo các helper tính toán dữ liệu chuẩn xác
     streak_tracker = GiftStreakTracker()
