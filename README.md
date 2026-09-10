@@ -1,7 +1,16 @@
 # PirateTok Live (Python Engine) — Kiến Trúc & Sổ Tay Kỹ Thuật Bảo Trì
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![WebSocket](https://img.shields.io/badge/WebSocket-Gateway-green.svg)](https://websockets.readthedocs.io/)
+[![Protobuf](https://img.shields.io/badge/Protobuf-betterproto-red.svg)](https://github.com/danielgtaylor/python-betterproto)
+
+> **⚠️ Disclaimer / Tuyên Bố Miễn Trừ Trách Nhiệm:**  
+> Dự án này được phát triển hoàn toàn vì **mục đích nghiên cứu học thuật và giáo dục kỹ thuật giao thức mạng (Educational & Research purposes only)**. Dự án không liên kết, không được tài trợ và không thuộc sở hữu của TikTok hay ByteDance Ltd. Mọi dữ liệu thu thập đều là các luồng sự kiện công khai (Public WebCast stream) mà người dùng bình thường đều có thể xem trên trình duyệt.
+
 > **Tài liệu đặc tả kỹ thuật, thuật toán và hướng dẫn bảo trì toàn diện 100% cho thư viện `piratetok_live`.**  
 > Thư viện cung cấp khả năng kết nối bất đồng bộ (`asyncio`) thời gian thực tới máy chủ **TikTok Live Webcast WebSocket (WSS)**, tự động giải mã các gói tin nhị phân **Protocol Buffers (Protobuf)**, xử lý nén **Gzip**, vượt cơ chế chống bot **JA3/JA4 TLS Fingerprint**, tự động phân luồng sự kiện và điều phối kết nối bền bỉ.
+
 
 ---
 
