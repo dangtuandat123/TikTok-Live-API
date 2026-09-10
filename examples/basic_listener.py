@@ -1,7 +1,11 @@
 import asyncio
 import datetime
 import json
+import os
 import sys
+
+# Allow running directly from repo root or examples/ folder
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Đảm bảo in tiếng Việt & Emoji trên Windows không bị lỗi bảng mã
 if sys.stdout and hasattr(sys.stdout, "reconfigure"):
@@ -10,6 +14,7 @@ if sys.stderr and hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 from piratetok_live import (
+
     TikTokLiveClient,
     EventType,
     TikTokEvent,

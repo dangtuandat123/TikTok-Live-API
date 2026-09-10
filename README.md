@@ -292,20 +292,26 @@ while (true) {
 
 ---
 
-## 📂 Repository Structure & 1-Click Scripts
+## 📂 Repository Structure
 
-The repository is organized for instant plug-and-play setup:
-
-* **`piratetok_live/`**: Core reverse-engineering library and Protobuf decoding engine.
-* **`ws_server.py`**: Standalone WebSocket Gateway Server (broadcasting JSON events on port 8765).
-* **`ws_client_example.html`**: Built-in web dashboard for visual testing & OBS Browser Source.
-* **`ws_client_example.py`**: Python client demonstrating connection and event handling.
-* **`example.py`**: Minimal in-process standalone Python live listener.
-* **`install.bat`**: 1-click batch installer for Windows (installs dependencies & Playwright Chromium).
-* **`start_server.bat`**: 1-click server runner for Windows CMD.
-* **`test_client.bat`**: 1-click interactive Python test console for Windows.
-* **`start_server.sh`**: 1-click server runner for Linux/macOS.
-* **`WEBSOCKET_GUIDE.md`**: Complete cross-language integration manual (Node.js, C#, PHP, Go, Web).
+```text
+tiktoklive_api/
+├── piratetok_live/          # Core reverse-engineering library and Protobuf decoding engine
+│   ├── auth/                # Headless Playwright TTWID token minting & TLS impersonation
+│   ├── connection/          # WebSocket binary GoIM protocol & frame handling
+│   ├── events/              # Protobuf router & event typing
+│   ├── helpers/             # GiftStreakTracker, LikeAccumulator, ProfileCache
+│   ├── http/                # WebCast HTTP endpoints & SIGI state parser
+│   └── proto/               # Betterproto Protocol Buffers schemas
+├── examples/                # Example clients & dashboards
+│   ├── basic_listener.py    # In-process standalone Python live stream listener
+│   ├── websocket_client.py  # Python WebSocket Gateway client example
+│   └── web_dashboard.html   # Real-time HTML5 / OBS Browser Source dashboard
+├── ws_server.py             # High-concurrency WebSocket Gateway Server (port 8765)
+├── requirements.txt         # Production dependencies
+├── LICENSE                  # MIT License
+└── README.md                # Technical documentation
+```
 
 
 ---
