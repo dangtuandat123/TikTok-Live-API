@@ -292,18 +292,21 @@ while (true) {
 
 ---
 
-## 📂 Standalone Distribution Package
+## 📂 Repository Structure & 1-Click Scripts
 
-For plug-and-play deployment onto Windows or Linux VPS environments, the repository includes a self-contained directory:
-👉 **[`tiktok_live_service/`](./tiktok_live_service/)**
+The repository is organized for instant plug-and-play setup:
 
-Inside you will find:
-* `ws_server.py`: The standalone gateway server.
-* `install.bat`: 1-click batch installer that verifies Python, upgrades pip, installs dependencies, and pulls Chromium.
-* `start_server.bat`: 1-click server runner for Windows CMD.
-* `test_client.bat`: 1-click interactive Python test console.
-* `ws_client_example.html`: Built-in web dashboard for visual testing.
-* `WEBSOCKET_GUIDE.md`: Deep-dive integration manual for all client platforms.
+* **`piratetok_live/`**: Core reverse-engineering library and Protobuf decoding engine.
+* **`ws_server.py`**: Standalone WebSocket Gateway Server (broadcasting JSON events on port 8765).
+* **`ws_client_example.html`**: Built-in web dashboard for visual testing & OBS Browser Source.
+* **`ws_client_example.py`**: Python client demonstrating connection and event handling.
+* **`example.py`**: Minimal in-process standalone Python live listener.
+* **`install.bat`**: 1-click batch installer for Windows (installs dependencies & Playwright Chromium).
+* **`start_server.bat`**: 1-click server runner for Windows CMD.
+* **`test_client.bat`**: 1-click interactive Python test console for Windows.
+* **`start_server.sh`**: 1-click server runner for Linux/macOS.
+* **`WEBSOCKET_GUIDE.md`**: Complete cross-language integration manual (Node.js, C#, PHP, Go, Web).
+
 
 ---
 
