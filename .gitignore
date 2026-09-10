@@ -28,3 +28,10 @@ tiktok_shop_mitm.py
 # OS files
 .DS_Store
 Thumbs.db
+
+# Archives & Binaries
+*.rar
+*.zip
+*.7z
+*.tar.gz
+
